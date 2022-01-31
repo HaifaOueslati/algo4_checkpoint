@@ -1,0 +1,16 @@
+ALGORITHM insertion
+VAR
+    arr : array of INTEGER[50];
+    i,j,key : INTEGER
+BEGIN
+for i from 1 to arr.length-1 step 1 do 
+    key = arr[i];
+    j = i-1;
+
+    WHILE (j>=0 && arr[j]>key) then
+     arr[j+1]=arr[j];
+        j=j-1;
+    END_WHILE
+     arr[j+1]=key;
+END_FOR
+ END
